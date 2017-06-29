@@ -22,8 +22,8 @@ const signIn = function (data) {
 }
 
 const changePassword = function (data) {
-  // console.log('api data list is: ', data)
-  // console.log('api store list is: ', store.user.id)
+  console.log('api data list is: ', data)
+  console.log('api store list is: ', store.user.token)
   return $.ajax({
     url: config.apiOrigin + '/change-password/' + store.user.id,
     method: 'PATCH',
@@ -34,14 +34,14 @@ const changePassword = function (data) {
   })
 }
 
-const signOut = function (data) {
+const signOut = function () {
+  console.log('api store is', store.user.token)
   return $.ajax({
     url: config.apiOrigin + '/sign-out/' + store.user.id,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
-    },
-    data
+    }
   })
 }
 

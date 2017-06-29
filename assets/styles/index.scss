@@ -12,4 +12,32 @@ body {
 .box {
   border: thin solid $white;
   height: 115px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: $white;
+  font-size: 60px;
+  text-align: center;
+}
+
+h2 {
+  color: $white;
+  font-size: 36px;
+  padding: 0px 0px 0px 265px;
+}
+
+form {
+  align: center;
+  color: $white;
+  font-size: 12px;
+  padding: 0px 100px 0px 40px;
+}
+
+#theWinnerIs {
+  font-size: 50px;
+}
+
+input {
+  color: #000000;
 }

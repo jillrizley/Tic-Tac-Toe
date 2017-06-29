@@ -5,74 +5,52 @@ const config = require('./config')
 const events = require('./events')
 
 $(() => {
+  events.addHandlers()
+})
+
+$(() => {
   setAPIOrigin(location, config)
   $('#sign-up-form').on('submit', events.onSubmit)
 })
 
-require('./example')
-
-// make an x appear in a box when clicked
 let clickCounter = 0
+const isWinner = function () {
+  if (($('#1').text() === $('#2').text() && $('#1').text() === $('#3').text() && $('#1').text() !== '') ||
+  (($('#4').text() === $('#5').text() && $('#4').text() === $('#6').text() && $('#4').text() !== '')) ||
+  (($('#7').text() === $('#8').text() && $('#7').text() === $('#9').text() && $('#7').text() !== '')) ||
+  (($('#1').text() === $('#4').text() && $('#1').text() === $('#7').text() && $('#1').text() !== '')) ||
+  (($('#2').text() === $('#5').text() && $('#2').text() === $('#8').text() && $('#2').text() !== '')) ||
+  (($('#3').text() === $('#6').text() && $('#3').text() === $('#9').text() && $('#3').text() !== '')) ||
+  (($('#1').text() === $('#5').text() && $('#1').text() === $('#9').text() && $('#1').text() !== '')) ||
+  (($('#3').text() === $('#5').text() && $('#3').text() === $('#7').text() && $('#3').text() !== ''))
+) {
+    return true
+  } else {
+    return false
+  }
+}
+
+// if that all has a value or x or has a value of o, winner
 
 $('.box').on('click', function (event) {
-  // const textValue = $(event.target).text('')
-  clickCounter++
-  console.log(clickCounter)
-  if (clickCounter % 2 === 0) {
-    $(event.target).text('O')
-    console.log(event.target)
-  } else {
-    $(event.target).text('X')
-    console.log(event.target)
+  if (!($(event.target).text())) {
+    clickCounter++
+    // console.log(clickCounter)
+    if (clickCounter % 2 === 0) {
+      $(event.target).text('O')
+      // console.log(event.target)
+    } else {
+      $(event.target).text('X')
+      // console.log(event.target)
+    }
+    if (isWinner()) {
+// say who wins
+      const winner = $(event.target).text()
+      console.log(winner)
+      $('#theWinnerIs').text('Player ' + winner + ' ' + 'you are the winner!!!')
+    }
   }
-//   if $.box.text === 'X' || textValue === 'O') {
-//   }
-})
-//
-// $('.box').one('click', function () {
-//   alert('This will be displayed only once.')
-// })
-// function gameOverQ () {
-//   Game_Board.winner = '?' // Assume the outcome is in doubt, then check.
-//   return winnerQ(1, 2, 3)  // check for 3-in-a-row horizontally
-//        || winnerQ(4, 5, 6)
-//        || winnerQ(7, 8, 9)
-//        || winnerQ(1, 4, 7) // check for 3-in-a-row vertically
-//        || winnerQ(2, 5, 8)
-//        || winnerQ(3, 6, 9)
-//        || winnerQ(1, 5, 9)  // check for 3-in-a-row diagonally
-//        || winnerQ(7, 5, 3)
-//        || stalemateQ ()   // check for win by 'cat'
-// }
-//
-// function winnerQ (p1, p2, p3) {
-//   const s = Game_Board.boardString
-//   const c1 = s.charAt(p1)
-//   if (c1 === '-') return false
-//   const c2 = s.charAt(p2)
-//   if (c1 !== c2) return false
-//   const c3 = s.charAt(p3)
-//   if (c1 !== c3) return false
-//   Game_Board.winner = c1
-//   return true
-// }
-//
-// function stalemateQ () {
-//   const s = Game_Board.boardString
-//   for (let i = 0; i < 9; i++) {
-//     if (s.charAt(i) === '-') return false
-//   }
-//   Game_Board.winner = 'C'
-//   return true
-// }
-// $(() => {
-//   event.addHandlers()
-// })
-
-// only click one square once
-// only click until the game has been won
-// end the damn game
-
-// end the game when there are no more spaces left
-// declare a winner
-// reset the game
+}
+)
+// if there is a value in all 3, theres a winner!
+// else keep playing

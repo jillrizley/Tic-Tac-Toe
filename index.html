@@ -10,48 +10,56 @@
       <!-- Do not add `script` tags unless you know what you are doing -->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+<H1>TIC-TAC-TOE</H1>
     </head>
     <body>
 
-<body class="container-fluid">
 <div>
     <form id="sign-up">
     <fieldset>
-      <legend>Sign up!</legend>
+      <h4>Sign up!</h4>
       <input type='text' placeholder='email' name='credentials[email]'/>
-      <input type='password' placeholder='password'  name='credentials[password]' />
-      <input type='password' placeholder='password'  name='credentials[password_confirmation]' />
-      <input type="submit" name="submit" value="Sign up!">
+      <input type='password' placeholder='password' name='credentials[password]'/>
+      <input type='password' placeholder='password' name='credentials[password_confirmation]'/>
+      <input type='submit' name='submit' value='Sign up!'/>
     </fieldset>
   </form>
 
   <form id="sign-in">
     <fieldset>
-      <legend>Sign in!</legend>
+      <h4>Sign in!</h4>
       <input type='text' placeholder='email' name='credentials[email]'/>
-      <input type='password' placeholder='password'  name='credentials[password]' />
-      <input type="submit" name="submit" value="Sign in!">
+      <input type='password' placeholder='password' name='credentials[password]'/>
+      <input type='submit' name='submit' value='Sign in!'/>
     </fieldset>
   </form>
 
-
         <form id="change-password">
           <fieldset>
-            <legend>Change Password!</legend>
-            <input type='password' placeholder='old password'  name='passwords[old]' />
-            <input type='password' placeholder='new password'  name='passwords[new]' />
-            <input type="submit" name="submit" value="Sign in!">
+            <h4>Change Password!</h4>
+            <input type='password' placeholder='old password' name='passwords[old]'/>
+            <input type='password' placeholder='new password' name='passwords[new]'/>
+            <input type='submit' name='submit' value='Change Password'/>
           </fieldset>
         </form>
 
+</br>
         <form id="sign-out">
           <fieldset>
-            <legend>Sign Out</legend>
-            <input type="submit" name="submit" value="Sign out!">
+            <input type='submit' name='submit' value='Sign Out'/>
           </fieldset>
         </form>
-</div>
+<hr>
 
+        <form id='new game'>
+          <input type='submit' name='new game' value='New Game'/>
+        </form>
+        <div id='theWinnerIs'>
+</div>
+</br>
+
+<h2>Let's Play!</h2>
+</div>
 
   <div id='Game_Board' class="container">
 
@@ -73,5 +81,7 @@
         <div id='9' class="col-xs-2 box"></div>
       </div>
     </div>
+
+
     </body>
 </html>

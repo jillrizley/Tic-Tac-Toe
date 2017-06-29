@@ -31,10 +31,18 @@ const onChangePassword = function (event) {
 
 const onSignOut = function (event) {
   event.preventDefault()
-  const data = getFormFields(this)
-  api.signOut(data)
-  .then(ui.changePasswordSuccess)
-  .catch(ui.changePasswordFailure)
+  api.signOut()
+  .then(ui.signOutSuccess)
+  .catch(ui.signOutSuccess)
+}
+
+const onNewGame = function (event) {
+  event.preventDefault()
+  console.log('new game started')
+  api.onNewGame()
+      .then(ui.onNewGameSuccess)
+      .catch(ui.onNewGameError)
+  $(this).attr('class')
 }
 
 const addHandlers = () => {
@@ -42,16 +50,7 @@ const addHandlers = () => {
   $('#sign-in').on('submit', onSignIn)
   $('#change-password').on('submit', onChangePassword)
   $('#sign-out').on('submit', onSignOut)
-  $('.box').on()
 }
-
-// const addHandlers = function () {
-//   $('.game-cell').on('click', placeX)
-// }
-//
-// const placeX = function () {
-//   $(this).text('X')
-// }
 
 module.exports = {
   addHandlers

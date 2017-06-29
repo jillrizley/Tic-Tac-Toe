@@ -20,11 +20,11 @@ const signInFailure = (error) => {
 }
 
 const changePasswordSuccess = function () {
-  console.log('Password has been changed!')
+  console.log('Password changed!')
 }
 
 const changePasswordFailure = function (error) {
-  console.log('You messed up!', error)
+  console.log('Password change failed', error)
 }
 
 const signOutSuccess = function () {
@@ -32,7 +32,7 @@ const signOutSuccess = function () {
 }
 
 const signOutFailure = function (error) {
-  console.log('You messed up!', error)
+  console.log('Sign out failed!', error)
 }
 
 module.exports = {
