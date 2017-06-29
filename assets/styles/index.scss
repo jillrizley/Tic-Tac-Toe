@@ -9,9 +9,7 @@ body {
   color: $font-color;
 }
 
-.col-xs-4 {
-  border: 1px solid $white;
-  height: 100px;
-  width: 100px;
-  margin: 2px 2px 2px 2px;
+.box {
+  border: thin solid $white;
+  height: 115px;
 }
