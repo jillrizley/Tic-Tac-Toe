@@ -30,7 +30,7 @@ const isWinner = function () {
   }
 }
 
-// if that all has a value or x or has a value of o, winner
+// if that all has a value or x or has a value of o, cats game!
 
 $('.box').on('click', function (event) {
   if (!($(event.target).text())) {
@@ -52,5 +52,6 @@ $('.box').on('click', function (event) {
   }
 }
 )
+// $('.box').off()
 // if there is a value in all 3, theres a winner!
 // else keep playing
