@@ -13,14 +13,10 @@
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
   <H1>TIC-TAC-TOE!!!!!</H1>
 
-  <!--CREATE A DIV HERE TO BE USED AS THE MESSAGES FOR SIGN IN/UP ETC.  -->
-
-
 </head>
 
-<body>
   <div class="auth"></div>
-  <form id="sign-up">
+  <form id="signUp">
     <fieldset>
       <h4>Sign up!</h4>
       <input type='text' placeholder='email' name='credentials[email]' />
@@ -29,17 +25,17 @@
       <input type='submit' name='submit' value='Sign up!' />
     </fieldset>
   </form>
-  <form id="sign-in">
+  <form id="singIn">
     <fieldset>
       <h4>Sign in!</h4>
-      <input type='text' placeholder='email' name='credentials[email]' value="1@1.com" />
-      <input type='password' placeholder='password' name='credentials[password]' value="3" />
+      <input type='text' placeholder='email' name='credentials[email]' />
+      <input type='password' placeholder='password' name='credentials[password]' />
       <input type='submit' name='submit' value='Sign in!' />
     </fieldset>
   </form>
   <div id="needsSignIn">
     <h2>Games Played to Date: <span class="games-played"></span></h2>
-    <form id="change-password">
+    <form id="changePassword">
       <fieldset>
         <h4>Change Your Password!</h4>
         <input type='password' placeholder='old password' name='passwords[old]' />
@@ -49,13 +45,13 @@
     </form>
 
     </br>
-    <form id="sign-out">
+    <form id="signOut">
       <fieldset>
         <input type='submit' name='submit' value='Sign Out' />
       </fieldset>
     </form>
     <hr>
-    <button class="btn btn-primary" id="new-game"]>New Game</button>
+    <button class="btn btn-primary" id="new-game" ]>New Game</button>
     <div id='theWinnerIs'>
     </div>
     </br>

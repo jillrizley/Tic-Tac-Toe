@@ -1,4 +1,6 @@
 'use strict'
+const store = require('../store')
+
 //
 //
 // $(() => {
@@ -6,6 +8,7 @@
 // })
 
 let clickCounter = 0
+store.gameEnded = store.gameEnded || false
 const isWinner = function () {
   if (($('#1').text() === $('#2').text() && $('#1').text() === $('#3').text() && $('#1').text() !== '') ||
   (($('#4').text() === $('#5').text() && $('#4').text() === $('#6').text() && $('#4').text() !== '')) ||
@@ -25,6 +28,9 @@ const isWinner = function () {
 // create else statement where if everything on the board has been clicked an no declared winner, that there is a draw
 
 $('.box').on('click', function (event) {
+  if (store.gameEnded) {
+    return false
+  }
   if (!($(event.target).text())) {
     clickCounter++
     // console.log(clickCounter)
@@ -38,8 +44,10 @@ $('.box').on('click', function (event) {
     if (isWinner()) {
 // say who wins
       const winner = $(event.target).text()
-      console.log(winner)
+      store.gameEnded = true
       $('#theWinnerIs').text('Player ' + winner + ' ' + 'you are the winner!!!')
+    } else if (clickCounter >= 9) {
+      $('#theWinnerIs').text('Draw!!!!!!')
     }
   }
 }

@@ -4,43 +4,43 @@ const store = require('../store')
 const api = require('./game-api')
 
 const signUpSuccess = (data) => {
-  console.log(data)
   $('.auth').text('You successully signed up!')
-  $('#sign-up')[0].reset()
+  $('#signUp')[0].reset()
 }
 
 const signUpFailure = (error) => {
-  console.error(error)
+  (error)
   $('.auth').text('Sign up failed!')
-  $('#sign-up')[0].reset()
+  $('#signUp')[0].reset()
 }
 
 const signInSuccess = (data) => {
   store.user = data.user
-  console.log(store.user)
   $('#needsSignIn').show()
   $('.auth').text('You successully signed in!')
-  $('#sign-in')[0].reset()
+  setTimeout(function () {
+    $('.auth').text('')
+  }, 3000)
+  $('#signIn')[0].reset()
   processSuccessfulLogin()
   api.getGames(data).then(populateGames)
 }
 
 const signInFailure = (error) => {
-  console.error(error)
+  (error)
   $('.auth').text('Sign in failed!')
-  $('#sign-in')[0].reset()
+  $('#signIn')[0].reset()
 }
 
 const changePasswordSuccess = function () {
-  console.log('Password changed!')
   $('.auth').text('Password changed!')
-  $('#change-password')[0].reset()
+  $('#changePassword')[0].reset()
 }
 
 const changePasswordFailure = function (error) {
-  console.log('Password change failed', error)
+  (error)
   $('.auth').text('Incorrect password!')
-  $('#change-password')[0].reset()
+  $('#changePassword')[0].reset()
 }
 
 const signOutSuccess = function () {
@@ -52,12 +52,14 @@ const signOutFailure = function (error) {
 }
 
 const onNewGameSuccess = function () {
+  store.gameEnded = false
+  $('#theWinnerIs').text('')
   $('.box').text('')
 }
 
 const processSuccessfulLogin = function () {
-  $('#sign-in').hide()
-  $('#sign-up').hide()
+  $('#signIn').hide()
+  $('#signUp').hide()
   $('#needsSignIn').show()
 }
 

@@ -38,7 +38,6 @@ const onSignOut = function (event) {
 
 const onNewGame = function (event) {
   event.preventDefault()
-  console.log('new game started')
   api.onNewGame()
       .then(ui.onNewGameSuccess)
       .catch(ui.onNewGameError)
@@ -46,10 +45,10 @@ const onNewGame = function (event) {
 }
 
 const addHandlers = () => {
-  $('#sign-up').on('submit', onSignUp)
-  $('#sign-in').on('submit', onSignIn)
-  $('#change-password').on('submit', onChangePassword)
-  $('#sign-out').on('submit', onSignOut)
+  $('#signUp').on('submit', onSignUp)
+  $('#signIn').on('submit', onSignIn)
+  $('#changePassword').on('submit', onChangePassword)
+  $('#signOut').on('submit', onSignOut)
   $('#new-game').on('click', onNewGame)
 }
 
