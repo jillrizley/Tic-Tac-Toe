@@ -1,67 +1,67 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Tic Tac Toe</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags unless you know what you are doing -->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Tic Tac Toe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags unless you know what you are doing -->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-<H1>TIC-TAC-TOE</H1>
-    </head>
-    <body>
+  <!-- Do not add `link` tags unless you know what you are doing -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-<div>
-    <form id="sign-up">
+  <!-- Do not add `script` tags unless you know what you are doing -->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  <H1>TIC-TAC-TOE!!!!!</H1>
+
+  <!--CREATE A DIV HERE TO BE USED AS THE MESSAGES FOR SIGN IN/UP ETC.  -->
+
+
+</head>
+
+<body>
+  <div class="auth"></div>
+  <form id="sign-up">
     <fieldset>
       <h4>Sign up!</h4>
-      <input type='text' placeholder='email' name='credentials[email]'/>
-      <input type='password' placeholder='password' name='credentials[password]'/>
-      <input type='password' placeholder='password' name='credentials[password_confirmation]'/>
-      <input type='submit' name='submit' value='Sign up!'/>
+      <input type='text' placeholder='email' name='credentials[email]' />
+      <input type='password' placeholder='password' name='credentials[password]' />
+      <input type='password' placeholder='password' name='credentials[password_confirmation]' />
+      <input type='submit' name='submit' value='Sign up!' />
     </fieldset>
   </form>
-
   <form id="sign-in">
     <fieldset>
       <h4>Sign in!</h4>
-      <input type='text' placeholder='email' name='credentials[email]'/>
-      <input type='password' placeholder='password' name='credentials[password]'/>
-      <input type='submit' name='submit' value='Sign in!'/>
+      <input type='text' placeholder='email' name='credentials[email]' value="1@1.com" />
+      <input type='password' placeholder='password' name='credentials[password]' value="3" />
+      <input type='submit' name='submit' value='Sign in!' />
     </fieldset>
   </form>
+  <div id="needsSignIn">
+    <h2>Games Played to Date: <span class="games-played"></span></h2>
+    <form id="change-password">
+      <fieldset>
+        <h4>Change Your Password!</h4>
+        <input type='password' placeholder='old password' name='passwords[old]' />
+        <input type='password' placeholder='new password' name='passwords[new]' />
+        <input type='submit' name='submit' value='Change Password' />
+      </fieldset>
+    </form>
 
-        <form id="change-password">
-          <fieldset>
-            <h4>Change Your Password!</h4>
-            <input type='password' placeholder='old password' name='passwords[old]'/>
-            <input type='password' placeholder='new password' name='passwords[new]'/>
-            <input type='submit' name='submit' value='Change Password'/>
-          </fieldset>
-        </form>
+    </br>
+    <form id="sign-out">
+      <fieldset>
+        <input type='submit' name='submit' value='Sign Out' />
+      </fieldset>
+    </form>
+    <hr>
+    <button class="btn btn-primary" id="new-game"]>New Game</button>
+    <div id='theWinnerIs'>
+    </div>
+    </br>
 
-</br>
-        <form id="sign-out">
-          <fieldset>
-            <input type='submit' name='submit' value='Sign Out'/>
-          </fieldset>
-        </form>
-<hr>
-
-        <form id='new game'>
-          <input type='submit' name='new game' value='New Game'/>
-        </form>
-        <div id='theWinnerIs'>
-</div>
-</br>
-
-<h2>Let's Play!</h2>
-</div>
-
-  <div id='Game_Board' class="container">
+    <h2>Let's Play!</h2>
+    <div id='Game_Board' class="container">
 
       <div class="row">
         <div id='1' class="col-xs-2 box col-xs-offset-3"></div>
@@ -81,7 +81,8 @@
         <div id='9' class="col-xs-2 box"></div>
       </div>
     </div>
+  </div>
 
+</body>
 
-    </body>
 </html>
