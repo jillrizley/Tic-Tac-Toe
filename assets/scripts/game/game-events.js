@@ -45,10 +45,10 @@ const onNewGame = function (event) {
 }
 
 const addHandlers = () => {
-  $('#signUp').on('submit', onSignUp)
-  $('#signIn').on('submit', onSignIn)
-  $('#changePassword').on('submit', onChangePassword)
-  $('#signOut').on('submit', onSignOut)
+  $('#sign-up').on('submit', onSignUp)
+  $('#sign-in').on('submit', onSignIn)
+  $('#change-password').on('submit', onChangePassword)
+  $('#sign-out').on('submit', onSignOut)
   $('#new-game').on('click', onNewGame)
 }
 

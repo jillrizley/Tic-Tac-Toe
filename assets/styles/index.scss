@@ -16,25 +16,28 @@ body {
 
 h1 {
   color: $white;
-  font-size: 60px;
+  font-size: 55px;
   text-align: center;
 }
 
 h2 {
   color: $white;
-  font-size: 36px;
+  font-size: 30px;
+  text-align: center;
+}
+
+h4 {
   text-align: center;
 }
 
 form {
-  align: center;
   color: $white;
-  font-size: 12px;
-  padding: 0px 100px 0px 40px;
+  font-size: 14px;
+  padding: 0 0 0 450px;
 }
 
 #theWinnerIs {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 input {

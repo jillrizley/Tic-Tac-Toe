@@ -4,8 +4,9 @@ const config = require('../config')
 const store = require('../store')
 
 const signUp = function (data) {
+  console.log('api data list is: ', data)
   return $.ajax({
-    url: config.apiOrigins.production + '/signUp/',
+    url: config.apiOrigins.production + '/sign-up/',
     method: 'POST',
     data
   })
@@ -13,7 +14,7 @@ const signUp = function (data) {
 
 const signIn = function (data) {
   return $.ajax({
-    url: config.apiOrigins.production + '/signIn/',
+    url: config.apiOrigins.production + '/sign-in/',
     method: 'POST',
     data
   })
@@ -21,7 +22,7 @@ const signIn = function (data) {
 
 const changePassword = function (data) {
   return $.ajax({
-    url: config.apiOrigins.production + '/changePassword/' + store.user.id,
+    url: config.apiOrigins.production + '/change-password/' + store.user.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -32,7 +33,7 @@ const changePassword = function (data) {
 
 const signOut = function () {
   return $.ajax({
-    url: config.apiOrigins.production + '/signOut/' + store.user.id,
+    url: config.apiOrigins.production + '/sign-out/' + store.user.id,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
