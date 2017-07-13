@@ -1,7 +1,7 @@
 'use strict'
 const store = require('../store')
 
-let clickCounter = 0
+store.clickCounter = store.clickCounter || 0
 store.gameEnded = store.gameEnded || false
 const isWinner = function () {
   if (($('#1').text() === $('#2').text() && $('#1').text() === $('#3').text() && $('#1').text() !== '') ||
@@ -20,12 +20,13 @@ const isWinner = function () {
 }
 
 $('.box').on('click', function (event) {
+  console.log(store.clickCounter)
   if (store.gameEnded) {
     return false
   }
   if (!($(event.target).text())) {
-    clickCounter++
-    if (clickCounter % 2 === 0) {
+    store.clickCounter++
+    if (store.clickCounter % 2 === 0) {
       $(event.target).text('O')
     } else {
       $(event.target).text('X')
@@ -34,7 +35,7 @@ $('.box').on('click', function (event) {
       const winner = $(event.target).text()
       store.gameEnded = true
       $('#theWinnerIs').text('Player ' + winner + ' ' + 'you are the winner!!!')
-    } else if (clickCounter >= 9) {
+    } else if (store.clickCounter >= 9) {
       $('#theWinnerIs').text('It\'s a Draw!!!')
     }
   }

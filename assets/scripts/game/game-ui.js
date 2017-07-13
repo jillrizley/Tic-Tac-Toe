@@ -57,6 +57,7 @@ const signOutFailure = function (error) {
 
 const onNewGameSuccess = function (data) {
   store.gameEnded = false
+  store.clickCounter = 0
   $('#theWinnerIs').text('')
   $('.box').text('')
   api.getGames(data).then(populateGames)
