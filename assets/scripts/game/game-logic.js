@@ -20,7 +20,6 @@ const isWinner = function () {
 }
 
 $('.box').on('click', function (event) {
-  console.log(store.clickCounter)
   if (store.gameEnded) {
     return false
   }
