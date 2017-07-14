@@ -16,13 +16,13 @@ const signUpFailure = (error) => {
 
 const signInSuccess = (data) => {
   store.user = data.user
-  $('#needsSignIn').show()
   $('.auth').text('You successully signed in!')
   setTimeout(function () {
     $('.auth').text('')
   }, 3000)
   $('#sign-in')[0].reset()
   api.getGames(data).then(populateGames)
+  $('#needsSignIn').show()
   processSuccessfulLogin()
 }
 
@@ -33,13 +33,20 @@ const signInFailure = (error) => {
 }
 
 const changePasswordSuccess = function () {
+  console.log('success')
   $('.auth').text('Password changed!')
+  setTimeout(function () {
+    $('.auth').text('')
+  }, 3000)
   $('#change-password')[0].reset()
 }
 
 const changePasswordFailure = function (error) {
   (error)
   $('.auth').text('Incorrect password!')
+  setTimeout(function () {
+    $('.auth').text('')
+  }, 3000)
   $('#change-password')[0].reset()
 }
 
@@ -57,8 +64,13 @@ const signOutFailure = function (error) {
 
 const onNewGameSuccess = function (data) {
   store.gameEnded = false
+  store.clickCounter = 0
   $('#theWinnerIs').text('')
   $('.box').text('')
+  $('.auth').text('Time to play!!')
+  setTimeout(function () {
+    $('.auth').text('')
+  }, 3000)
   api.getGames(data).then(populateGames)
 }
 
