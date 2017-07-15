@@ -4,7 +4,6 @@ const config = require('../config')
 const store = require('../store')
 
 const signUp = function (data) {
-  console.log('api data list is: ', data)
   return $.ajax({
     url: config.apiOrigins.production + '/sign-up/',
     method: 'POST',

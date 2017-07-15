@@ -33,7 +33,6 @@ const signInFailure = (error) => {
 }
 
 const changePasswordSuccess = function () {
-  console.log('success')
   $('.auth').text('Password changed!')
   setTimeout(function () {
     $('.auth').text('')

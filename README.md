@@ -8,16 +8,14 @@ HTML, CSS, Javascript, JQuery, bootstrap
 **User stories**
 +  As a user, I want to be able to sign in.
 +  As a user, I want to be able to change my password easily.
-+  As a user, I want to have a tally of games I have won.
++  As a user, I want to be see how many games I have played.
 
 **Development Process**
-Aside from our project study, I began by thinking about the different specs that were necessary and how to start breaking down the issues involved in creating the game.
+I started this project by thinking about the different specifications that were necessary to create a fully functioning tic-tac-toe game. That began with breaking down the game into individual parts and focussing on how to make each of them work indiviually before putting everything together to create the game.
 
-I started with the basic board and quickly attempted to jump into the javascript logic to make the game work. I had a lot of difficulty crafting the functions to make everything work so far!
+I started with creating the board itself and then jumped into the javascript logic. While difficult, I was able to make the game work as planned!
 
-We had just learned about the login credentials, so fresh on my mind, it was not too complicated to get that in motion for this new project.
-
-I did my best to meet the requierment, but given the time and the help I feel as though I needed I didn't quite make it there, although I am proud of the project I have so far.
+I am very proud of the project I have build so far, I have learned a lot and I hope to keep editing and adding to this project as I continue to learn more techniques.
 
 **Unsolved problems**
-Creating a cats game, new game button that does more than just refresh the page, the API for the game part of the project, playing multiple games at a time...all of which I look forward to implimenting.
+playing multiple games at a time, creating a more user friendly interface
