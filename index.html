@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Tic Tac Toe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags unless you know what you are doing -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags unless you know what you are doing -->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  <H1>TIC-TAC-TOE</H1>
+  <br>
+</head>
+
+
+<button type="button" class="btn btn-default" id='modal-button' data-toggle="modal" data-target="#exampleModalLong">
+Sign In!</button>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="col-xs-4">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Sign In!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="needsSignInSuccess">
+          <div class="auth"></div>
+          <h4>Sign up!</h4>
+          <form id="sign-up">
+            <fieldset>
+              <input type='text' placeholder='email' name='credentials[email]' />
+              <input type='password' placeholder='password' name='credentials[password]' />
+              <input type='password' placeholder='password confirmation' name='credentials[password_confirmation]' />
+              <button class="btn btn-default btn-sm" id="sign-up"]>Sign Up</button>
+            </fieldset>
+          </form>
+
+          <h4>Sign in!</h4>
+          <form id="sign-in">
+            <fieldset>
+              <input type='text' placeholder='email' name='credentials[email]'/>
+              <input type='password' placeholder='password' name='credentials[password]'/>
+              <button class="btn btn-default btn-sm" id="sign-in" ]>Sign In</button>
+            </fieldset>
+          </form>
+        </div>
+
+        <div id="needsSignIn">
+          <div class="auth"></div>
+          <h4>Change Your Password Here!</h4>
+          <form id="change-password">
+            <fieldset>
+              <input type='password' placeholder='old password' name='passwords[old]' />
+              <input type='password' placeholder='new password' name='passwords[new]' />
+              <button class="btn btn-default btn-sm" id="change-password"]>Change Password</button>
+            </fieldset>
+          </form>
+
+        </br>
+        <form id="sign-out">
+          <fieldset>
+            <button class="btn btn-default btn-sm" id="sign-out">Sign Out</button>
+          </fieldset>
+        </form>
+        <hr>
+
+      </div>
+    </div>
+  </div>
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- new game and games played to date -->
+<div class="col-md-5 offset-md-7"></div>
+<button class="btn btn-default" id="new-game">New Game</button>
+<div id='theWinnerIs'>
+</div>
+<!-- end of new game and games played to date -->
+
+
+<h3>To keep track of your games and play more than once, please sign in!</h3>
+
+<br/>
+
+<div>
+  <h2>Games Played to Date: <span class="games-played"></span></h2>
+</div>
+
+<!-- auth -->
+<!-- <div id="needsSignInSuccess">
+  <div class="auth"></div>
+<h4>Sign up!</h4>
+  <form id="sign-up">
+    <fieldset>
+      <input type='text' placeholder='email' name='credentials[email]' />
+      <input type='password' placeholder='password' name='credentials[password]' />
+      <input type='password' placeholder='password confirmation' name='credentials[password_confirmation]' />
+      <button class="btn btn-default btn-sm" id="sign-up"]>Sign Up</button>
+    </fieldset>
+  </form>
+
+      <h4>Sign in!</h4>
+    <form id="sign-in">
+      <fieldset>
+        <input type='text' placeholder='email' name='credentials[email]'/>
+        <input type='password' placeholder='password' name='credentials[password]'/>
+        <button class="btn btn-default btn-sm" id="sign-in" ]>Sign In</button>
+      </fieldset>
+    </form>
+  </div>
+
+    <div id="needsSignIn">
+      <div class="auth"></div>
+      <h4>Change Your Password Here!</h4>
+      <form id="change-password">
+        <fieldset>
+          <input type='password' placeholder='old password' name='passwords[old]' />
+          <input type='password' placeholder='new password' name='passwords[new]' />
+          <button class="btn btn-default btn-sm" id="change-password"]>Change Password</button>
+        </fieldset>
+      </form>
+
+      </br>
+      <form id="sign-out">
+        <fieldset>
+          <button class="btn btn-default btn-sm" id="sign-out">Sign Out</button>
+        </fieldset>
+      </form>
+      <hr> -->
+<!-- end of auth -->
+
+
+<!-- game board -->
+      <div id='Game_Board' class="container">
+
+        <div class="row">
+          <div id='1' class="col-xs-2 box col-xs-offset-3"></div>
+          <div id='2' class="col-xs-2 box"></div>
+          <div id='3' class="col-xs-2 box"></div>
+        </div>
+
+        <div class="row">
+          <div id='4' class="col-xs-2 box col-xs-offset-3"></div>
+          <div id='5' class="col-xs-2 box"></div>
+          <div id='6' class="col-xs-2 box"></div>
+        </div>
+
+        <div class="row">
+          <div id='7' class="col-xs-2 box col-xs-offset-3"></div>
+          <div id='8' class="col-xs-2 box"></div>
+          <div id='9' class="col-xs-2 box"></div>
+        </div>
+      </div>
+      <!-- end of game board -->
+
+    </div>
+
+</body>
+
+</html>
