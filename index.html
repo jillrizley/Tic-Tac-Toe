@@ -15,14 +15,16 @@
   <br>
 </head>
 
-<h3>To keep track of your games and play more than once, please sign in! ENJOY!</h3>
 
 <button type="button" class="btn btn-default" id='modal-button' data-toggle="modal" data-target="#exampleModalLong">
 Sign In!</button>
 
+
+
 <!-- Modal -->
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
+    <div class="col-xs-4">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Sign In!</h5>
@@ -85,6 +87,21 @@ Sign In!</button>
   </div>
 </div>
 
+<!-- new game and games played to date -->
+<button class="btn btn-default" id="new-game">New Game</button>
+<div id='theWinnerIs'>
+</div>
+<!-- end of new game and games played to date -->
+
+
+<h3>To keep track of your games and play more than once, please sign in!</h3>
+
+<br/>
+
+<div>
+  <h2>Games Played to Date: <span class="games-played"></span></h2>
+</div>
+
 <!-- auth -->
 <!-- <div id="needsSignInSuccess">
   <div class="auth"></div>
@@ -128,14 +145,6 @@ Sign In!</button>
       <hr> -->
 <!-- end of auth -->
 
-<!-- new game and games played to date -->
-      <button class="btn btn-default" id="new-game">New Game</button>
-      <div id='theWinnerIs'>
-      </div>
-      <div>
-        <h2>Games Played to Date: <span class="games-played"></span></h2>
-      </div>
-<!-- end of new game and games played to date -->
 
 <!-- game board -->
       <div id='Game_Board' class="container">
