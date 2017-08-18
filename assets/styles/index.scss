@@ -1,11 +1,10 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap/';
-$background-color: #1e4e3e;
-$font-color: #dfdfdf;
+$font-color: charcoal;
 $white: #fff;
 
 body {
-  background-color: $background-color;
+background-image: url(back.jpg);
   color: $font-color;
 }
 
@@ -18,12 +17,18 @@ h1 {
   color: $white;
   font-size: 55px;
   text-align: center;
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: pink;
 }
 
 h2 {
   color: $white;
   font-size: 30px;
   text-align: center;
+}
+
+#bodydiv{
+text-align: center;
 }
 
 #theWinnerIs {
